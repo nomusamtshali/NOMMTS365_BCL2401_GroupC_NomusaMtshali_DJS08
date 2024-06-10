@@ -1,34 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { getVans } from "../../api";
+import { Link, useSearchParams } from "react-router-dom";
+import { getVans } from "../../api.js";
 
 export default function Vans() {
-  const [searchParams, setSearchParams] = useSearchParams()
-  const [vans, setVans] = React.useState([])
-  const [loading, setLoading] = React.useState(false)
-  const [error, setError] = React.useState(null)
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [vans, setVans] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
-  const typeFilter = searchParams.get("type")
+  const typeFilter = searchParams.get("type");
 
   React.useEffect(() => {
     async function loadVans() {
-      setLoading(true)
+      setLoading(true);
       try {
-        const data = await getVans()
-        setVans(data)
+        const data = await getVans();
+        setVans(data);
       } catch (err) {
-        setError(err)
+        setError(err);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
     }
 
-    loadVans()
-  }, [])
+    loadVans();
+  }, []);
 
   const displayedVans = typeFilter
     ? vans.filter((van) => van.type === typeFilter)
-    : vans
+    : vans;
 
   const vanElements = displayedVans.map((van) => (
     <div key={van.id} className="van-tile">
@@ -39,7 +39,7 @@ export default function Vans() {
           type: typeFilter,
         }}
       >
-        <img src={van.imageUrl} />
+        <img src={van.imageUrl} alt="Van Image" />
         <div className="van-info">
           <h3>{van.name}</h3>
           <p>
@@ -50,7 +50,7 @@ export default function Vans() {
         <i className={`van-type ${van.type} selected`}>{van.type}</i>
       </Link>
     </div>
-  ))
+  ));
 
   function handleFilterChange(key, value) {
     setSearchParams((prevParams) => {
@@ -60,7 +60,7 @@ export default function Vans() {
         prevParams.set(key, value);
       }
       return prevParams;
-    })
+    });
   }
 
   if (loading) {
@@ -100,7 +100,7 @@ export default function Vans() {
         {typeFilter ? (
           <button
             onClick={() => handleFilterChange("type", null)}
-            className="van-type clear-filters"
+            className="van-type clear-filter"
           >
             Clear filter
           </button>
@@ -108,5 +108,5 @@ export default function Vans() {
       </div>
       <div className="van-list">{vanElements}</div>
     </div>
-  )
+  );
 }
