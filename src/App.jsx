@@ -21,7 +21,7 @@ import AuthRequired from "./components/AuthRequired";
 
 import "./server.js";
 
-function App() {
+export default function App() {
   return (
     <>
    <BrowserRouter>
@@ -55,5 +55,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-// export default App;
+
