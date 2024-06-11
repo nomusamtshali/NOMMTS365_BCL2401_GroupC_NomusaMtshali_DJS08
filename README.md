@@ -4,13 +4,12 @@
 
 After cloning the repo, run `npm install` to install the dependencies 
 
-Are you ready to get stuck into some React Router? For this challenge, you are required to code along with the lecturer from this lesson: [VanLife Project Bootstrapping](https://scrimba.com/learn/react/vanlife-project-bootstrapping-co8bc40b191eec875ecf00b23).
-
-For this challenge you are required to code along with the lecturer from this lesson: https://scrimba.com/learn/react/vanlife-project-bootstrapping-co8bc40b191eec875ecf00b23
-
-The starter code has all the CSS styling required for the project; you will just need to link the corresponding classes as you code along. Jump into the start code here: [GitHub Repository](https://github.com/CodeSpace-Academy/StudentNo_Classcode_Group_Name-Surname_DJS08/tree/main).
+# Project Brief 
+- I was required to code along with the lecturer from this lesson: [VanLife Project Bootstrapping](https://scrimba.com/learn/react/vanlife-project-bootstrapping-co8bc40b191eec875ecf00b23). The starter code had all the CSS styling required for the project; I had to just link the corresponding classes as I code along. 
 
 The focus for this project will be to understand routing and present your code. Along with your code, you will need to submit a recorded presentation talking through the presentation points included below.
+
+# Project Overview
 
 ## React Routing Presentation Talking Points
 
@@ -39,4 +38,28 @@ For your recorded presentation, you will be discussing key concepts related to R
 
 Be prepared to provide code snippets and real-world application examples from your Van Life Project to support your explanations.
 
-Make sure to submit your project to the DJS08 Project Tab on the LMS. Include a link to your Loom Presentation in your README.
+# Elements Included
+- API
+- React icons & Firebase dependencies
+- Bootstrap 
+- CSS Styling
+- React Hooks (useState, useEffect, useParams, useSearchParams)
+- React Router Hooks (useNavigate, useLocation)
+- React Router Components (BrowserRouter, Routes, Route, Link, NavLink)
+
+# Reflections
+
+## Areas of Mastery 
+- I was able to successfully set up React Router and implement routing in my application even though it took a lot of time.
+- I gained a good understanding of route parameters and nested routes, which helped me to structure my application in a more organized way.
+
+## Challenges Faced
+- I faced some challenges while implementing navigation controls and dynamic linking, but I was able to overcome them with the help of my peers and online resources.
+- Installing missing dependencies to get my application to work.
+
+## Areas of Improvement
+- I need to improve my understanding of search parameters and the useSearchParams hook, as I found it a bit tricky to implement.
+- I would like to explore more advanced features of React Router, such as route protection and authentication.
+
+# Overall Learning Experiences
+- This project helped me to gain a deeper understanding of React Router and its applications in building single-page applications. I learned how to effectively use React Router to create a well-structured and navigable application. I realized the importance of practice and patience while learning new concepts in React.
